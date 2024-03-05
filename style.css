@@ -1,0 +1,616 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: futura;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #f7f7f7;
+}
+
+*::selection{
+    color: #ffff;
+    background-color:black;
+}
+
+#nav{
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: brown; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#nav-part1{
+    /* background-color: red; */
+    height: 84px;
+    overflow: hidden;
+}
+
+#nav-part1 svg{
+    display: block;
+}
+
+#nav #nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#links{
+    padding: 10px;
+}
+
+
+#nav-part2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+    margin:0px 20px;
+}
+
+
+#nav-part2 #icon i{
+    font-size: 18px;
+    margin: 0px 20px;
+    font-weight: 100;
+}
+
+#icon{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#cursor{
+    height: 180px;
+    width: 180px;
+    background-color: rgb(225, 120, 223);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0 1vw;
+    padding-top: 20vh;
+}
+
+#page1 h1{
+    font-size: 32vh;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 14vw;
+    letter-spacing: -10px;
+}
+
+#video-container{
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+    margin-top: 1vw;
+    position: relative;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play{
+    height: 6vw;
+    width: 6vw;
+    background-color: black;
+    color: #ffff;
+    font-size: 1.3vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: futura;
+    letter-spacing: 0;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    scale: 0;
+}
+
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+
+#page2 .elem{
+    height:100%;
+    width: 30%;
+    /* background-color: brown; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page2  .elem .dets{
+    height: 60px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: bisque;
+}
+
+#page3 {
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    /* background-color: #f7f7f7; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child{
+    height: 54vh;
+    width: 38vw;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child img{
+    height: 100%;
+}
+
+#page4{
+    height: 65vh;
+    width: 100%;
+    padding: 3vw 1vw;
+    /* background-color:rgb(255, 238, 0) ; */
+    display: flex;
+}
+
+#page4 #box1{
+    width: 50%;
+    /* background-color:pink; */
+    font-size: 3.8vw;
+    line-height: 4vw;
+}
+
+#page4 #box2{
+    width: 50%;
+    /* background-color:rgb(65, 255, 48); */
+    padding: 0vw 15vw;
+}
+
+#page4 p{
+    margin-bottom: 3vw;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Helvetica;
+}
+#page4 a{
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+#page5{
+    width: 100%;
+    height: 65vw;
+    /* background-color: yellowgreen; */
+    padding: 3vw 1vw;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#page5 #cont{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+#page5 #top {
+    display: flex;
+    justify-content: space-between;
+}
+#page5 #top span{
+    font-size: 12px;
+    font-weight: 500;
+    font-family:Helvetica;
+}
+
+#cont{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+#page5 #cont h1 {
+    font-size: 5vw;    
+    line-height: 6vw;
+    text-align: center;
+    margin: 10vw 5vw;
+
+}
+
+#page5 #cont input {
+    width: 20vw;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    font-size: 1vw;
+    font-weight: 100;
+    border: none;
+    text-align: center;
+    outline: none;
+    text-transform: uppercase;
+    margin-left: 42vw;
+}
+
+#page5 #cont p{
+    margin: 3vw 35vw 1vw 42vw;
+    font-family:Helvetica;
+    text-align: center;
+}
+
+#page6{
+    width: 100%;
+    height: 50vw;
+    padding: 1vw 1vw;
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#page6 #box{
+    top: 0;
+    width: 31.6vw;
+    height: 95%;
+    /* background-color: yellow; */
+}
+
+#page6 .box1 p{
+    font-family:Helvetica;
+    font-size: 16px;
+    padding-bottom: 3vw;
+    padding-right: 10vw;
+}
+
+#page6 .box1 a{
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+    font-size: 10px;
+    padding-top: 15vw; 
+}
+
+#page6 #box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+footer{
+    height: 54vw;
+    width: 100%;
+    /* background-color: #333; */
+    padding: 1vw 1vw;
+}
+
+#email{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#email input{
+    width: 95%;
+    height: 4vw;
+    font-size: 2.8vw;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    text-transform: uppercase;
+}
+#email i{
+    font-size: 2vw;
+}
+
+#foot-ele{
+    width: 100%;
+    height: 26vw;
+    margin-top: 10vw;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#foot-ele .box1{
+    width: 20vw;
+    height: 90%;
+    /* background-color: red; */
+    display: block;
+    align-items: center;
+    justify-content:center;
+}
+#foot-ele ul{
+    margin-top: 10%;
+    list-style-type: none;
+    font-size: 1vw;
+
+}
+#foot-ele h4{
+    /* margin-bottom: 10%; */
+    font-size: 1vw;
+    font-weight: 600;
+    font-family: Helvetica;
+}
+
+#foot-ele li{
+    font-family: Helvetica;
+    font-size: 1vw;
+    margin-top: 8px;
+}
+
+#foot-ele .box2{
+    width: 50%;
+    height: 90%;
+    /* background-color: red; */
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+
+#foot-ele .box2 p{
+    margin: 1vw 0;
+    font-family: Helvetica;
+}
+
+#foot-ele .box2 a{
+    margin-left: 3vw;
+    text-decoration: none;
+    color: black;
+    font-family: Helvetica;
+}
+
+
+
+#foot-ele .box3{
+    width: 20vw;
+    height: 90%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: end;
+    text-align: end;
+}
+
+#foot-ele #box3 ul{
+    top: 0;
+    list-style-type: none;
+    font-size: 1vw;
+}
+/* #foot-elem  #box3 h4 {
+    margin-bottom: 10%;
+    font-size: 1vw;
+    font-weight: 600;
+    font-family: Helvetica;
+} */
+
+#foot-elem #box3 li{
+    font-family: Helvetica;
+    font-size: 1vw;
+    margin-top: 8px;
+}
+
+#lastp p {
+    margin: 1vw 22vw;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+
+
+
+
+@media (max-width:600px) {
+
+    #nav{
+        /* height: 100px; */
+        width: 100%;
+        /* background-color: brown; */
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    
+    #nav-part1{
+        /* background-color: red; */
+        height: 64px;
+        overflow: hidden;
+    }
+    
+    #nav-part1 svg{
+        display: block;
+        height: 67px;
+        width: 80px;
+    }
+
+    #nav #twogoodlogo{
+        height: 40px;
+        margin-left: -20px;
+    }
+    
+    #nav #nav-part2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    #links{
+        padding: 10px;
+        display: none;
+    }
+    
+    
+    #nav-part2 #links a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #333;
+        font-weight: 400;
+        font-size: 14px;
+        margin:0px 20px;
+    }
+    
+    
+    #nav-part2 #icon i{
+        font-size: 15px;
+        margin: 0px 20px;
+        font-weight: 100;
+    }
+    
+    #icon{
+        padding: 7px;
+        border-radius: 50px;
+        background-color: white;
+    }
+
+
+
+    #page1{
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    }
+
+    #page1 h1{
+        font-size: 7vh;
+        letter-spacing: -2px;
+    }
+
+
+    #video-container{
+        height: 25vh;
+        margin-top: 3vw;
+    }
+
+    #video-container #play{
+        height: 16vw;
+        width: 16vw;
+        font-size: 4.5vw;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        letter-spacing: 0;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+    }
+
+    #page2{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 5vw 3vw;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    #page2 .elem{
+        height:100%;
+        width: 100%;
+        /* background-color: brown; */
+        overflow: hidden;
+        margin-bottom: 3vw;
+    }
+    
+    #page2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 1.1;
+    }
+
+    #page2  .elem .dets{
+        height: 40px;
+        border-radius: 50px;
+        width: 70%;
+        position: absolute;
+        z-index: 9;
+        background-color: bisque;
+    }
+
+    #page3 {
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        /* background-color: #f7f7f7; */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .child{
+        height: 54vh;
+        width: 88vw;
+        /* background-color: red; */
+        position: relative;
+        padding: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .child img{
+        height: 100%;
+    }
+
+}
